@@ -36,9 +36,15 @@ window.onscroll = function() {
         });
     }
     else{
-     main_navbar.css({
+       main_navbar.css({
         "position": "relative"
     });
- }
+   }
+   let sr =$(window).scrollTop()
+   let skill_bar = $('.about-me .skills').offset().top
+   if (sr > (skill_bar-450)) {
+    $('.about-me .skills .skill:nth-child(1) .skill-bar span').animate({'width': '90%'}, 400)
+};
+
 };
 
