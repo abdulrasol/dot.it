@@ -131,11 +131,10 @@ body .uk-container +.fixed{
 	padding: 5px 10px;
 	background-color: #1e87f0;
 	transition: width 1s ease;
-	width: 0;
 
 }
 .about-me .skills .skill:nth-child(1) .skill-bar span{
-	
+	width: 90%
 }
 .about-me .skills .skill:nth-child(2) .skill-bar span{
 	width: 80%
