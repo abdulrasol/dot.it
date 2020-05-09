@@ -29,7 +29,7 @@ var main_navbar = $("#main-navbar");
 window.onscroll = function() {
     var height = $(window).scrollTop(),
     width = $(window).width();
-    if (height > main_navbar.height()){
+    if (height > 151){
         main_navbar.css({
             "position": "fixed",
             'left': '0px'
