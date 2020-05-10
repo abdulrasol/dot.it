@@ -2,7 +2,7 @@
 	font-family: 'Cairo', sans-serif;
 }
 
-nav.navbar {
+nav {
 	margin: 50px 20px;
 	position: relative;
 }
@@ -25,80 +25,89 @@ nav .logo-container .logo span{
 	padding:0 5px;
 	border-radius: 5px;
 }
-nav .main-navbar{
-	margin: 0 auto;
-	top: 0;
+
+.navbar-fix{
+	height: 76px;
+	display: block;
+}
+
+.navbar-container{
+	
+}
+
+.navbar{
 	width: 100%;
-	background-color: #ffffffb0;
-	z-index: 999;
+	background-color: #ffffff;
 }
 
 
-
-
-nav .list-container .mobile-nav-btn{
-	display: none;
-	z-index: 10;
-}
-
-
-nav .uk-list li {
+.navbar .uk-list li {
 	display: inline-block;
 	font-size: 24px;
 	padding-top: 5px;
 	padding-bottom: 5px; 
 	font-weight: 600;
 	transition: all .3s ease-in-out;
-	cursor: pointer;
 }
-nav .uk-list li:hover{
+.navbar .uk-list li:hover{
 	background-color: #1e87f080;
 	color: #ffffff;
 	border-radius: 5px;
 	
 }
-nav .uk-list li a{
+.navbar .uk-list li a{
 	color: inherit;
 }
-nav .uk-list li a:hover{
+.navbar .uk-list li a:hover{
 	text-decoration: none;
 }
-nav .uk-list li.active{
+.navbar .uk-list li.active{
 	background-color: #1e87f0;
 	color: #ffffff;
 	border-radius: 5px;
 	transition: all .3s ease-in-out;
 }
 
-nav .mobile-nav-btn {
+.mobile-nav-btn{
 	display: none;
-	width: 100%
+	z-index: 10;
+	background-color: #ffffff9c
 }
 
-
-nav .mobile-nav-btn span{
+.mobile-nav-btn span{
 	cursor: pointer;
 }
 
 
+.scrolled{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 5;
+
+}
+
 @media (max-width:800px) {
 	/*  Mobile display */
-	nav.navbar {
-		margin: 0;
-		position: relative;
+	.navbar-container{
+		height: 80px;
 	}
-
-	nav .list-container{
+	.navbar{
+		display: none;
+	}
+	.list-container{
 		display: none;
 		background-color: #ffffff;
 	}
-	nav .uk-list li {
+	.navbar .uk-list li {
 		display: block;
 		font-size: 24px;
 		font-weight: 600;
 		margin: 15px;
 	}
-	nav .mobile-nav-btn {
+	.mobile-nav-btn {
 		display: block;
 	}
 }
@@ -152,9 +161,8 @@ body .uk-container +.fixed{
 	margin-top: 50px
 }
 
-.about-me .cv button{
+.about-me .cv span{
 	padding: 18px 32px;
-	background-color: #FFF;
 	border: 2px solid #1e87f0;
 	border-radius: 5px;
 	color:#1e87f0;
@@ -163,7 +171,7 @@ body .uk-container +.fixed{
 	cursor: pointer;
 	transition: all .4s ease-in-out;
 }
-.about-me .cv button:hover{
+.about-me .cv span:hover{
 	padding: 18px 32px;
 	border: 2px solid #1e87f0;
 	border-radius: 5px;
@@ -182,10 +190,4 @@ body .uk-container +.fixed{
 
 .text-center{
 	text-align: center;
-}
-
-@media (max-width: 630px){
-	.center-s{
-		text-align: center;
-	}
 }
