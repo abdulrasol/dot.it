@@ -10,7 +10,7 @@ $('document').ready(function () {
         if ($(this).text() === 'Home') {
             $('html').animate({scrollTop: 0}, 400);
         } else {
-            $('html').animate({scrollTop: (sr - 80)}, 400);
+            $('html').animate({scrollTop: (sr - 25)}, 400);
         }
         if ($(window).width() <= 800){
             $('nav .list-container').slideToggle('slow');
