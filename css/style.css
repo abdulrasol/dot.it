@@ -183,16 +183,46 @@ body .uk-container +.fixed{
 	background-color: #f7f7f7;
 	padding:80px 0 60px;
 }
-
-.servies .serv .img-container{
-	width: 140px;
-	height: 140px;
+.servies .serv {
+	box-sizing: border-box;
 }
 
-.servies .serv .imgs img{
+@media (max-width: 620px) {
+	.servies .serv {
+		margin-bottom: 10px;
+		width: 100%
+	}
+}
+@media (min-width: 621px) {
+	.servies .serv {
+		width: 50%
+	}
+}
+@media (min-width: 920px) {
+	.servies .serv {
+		width: 33.333333%
+	}
+}
+
+
+.servies .serv .img-container{
+	max-width: 280px;
+	max-height: 280px;
+	margin: auto;
+}
+
+.servies .serv img{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	border-radius: 50%;
+	border: 2px solid #fff
+}
+.servies .serv h2 {
+	margin-bottom: 5px;
+}
+.servies .serv h4 {
+	margin-top: 5px;
 }
 
 /**/
