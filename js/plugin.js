@@ -26,6 +26,12 @@ $('document').ready(function () {
         $('html').animate({scrollTop: (skills.offset().top - 85)}, 400);
     });
 
+
+    $('.port ul.filter-tags li').click(function(event) {
+        /* Act on the event */
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
     // nice scroll plugin
     /*
     $("body").niceScroll({

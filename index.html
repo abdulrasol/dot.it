@@ -66,7 +66,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="about-me" class="about-me uk-padding">
+	<div id="about-me" class="about-me">
 		<div class="uk-container">
 			<div class="uk-flex uk-flex-middle uk-flex-center uk-child-width-auto@s" uk-grid>
 				<div class="about-img">
@@ -115,10 +115,9 @@
 			</div>
 		</div>
 	</div>
-	<div id="servies" class="servies uk-padding">
+	<div id="servies" class="servies">
 		<div class="uk-container">
 			<div class="uk-text-center">
-				<h2 class="section-title">Servies</h2>
 				<div class="uk-flex uk-flex-center" uk-grid>
 					<div class="serv">
 						<h2>Designs</h2>
@@ -144,6 +143,32 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div id="portfolio" class="port">
+		<div class="uk-container">
+			<h2>My Works</h2>
+			<div uk-filter="target: .js-filter">
+				<ul class="filter-tags">
+					<li class="active" uk-filter-control>All</li>
+					<li uk-filter-control=".tag-web">Web Development</li>
+					<li uk-filter-control=".tag-design">Graphics Design</li>
+					<li uk-filter-control=".tag-ads">Others</li>
+				</ul>
+				<ul class="js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center" uk-grid>
+					<li class="tag-web">
+						<div class="uk-card uk-card-default uk-card-body">Item</div>
+					</li>
+					<li class="tag-design">
+						<div class="uk-card uk-card-primary uk-card-body">Item</div>
+					</li>
+					<li class="tag-ads">
+						<div class="uk-card uk-card-secondary uk-card-body">Item</div>
+					</li>
+				</ul>
+
+			</div>
+			
 		</div>
 	</div>
 	<script src="js/uikit.min.js"></script>
