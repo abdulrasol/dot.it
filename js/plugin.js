@@ -1,8 +1,15 @@
 /* global $, window */
 /* jshint esversion: 6 */
+let navbar_list = $('.navbar .navbar-list');
+let nav_height = $('nav').innerHeight();
+let navbar_control = $('.navbar .navbar-control #mobile-nav-btn');
+let move_to_skill = $('#move-to-skills');
+let skills = $('#skills');
+let mobile_nav_btn = document.getElementById("mobile-nav-btn");
+var main_navbar = $(".navbar-container .navbar");
 $('document').ready(function () {
     'use strict';
-    $('nav .uk-list li').click(function(event) {
+    $('.navbar .uk-list li').click(function(event) {
         /* Act on the event */
         var id = $(this).data('id');
         var sr = $('#'+id).offset().top;
@@ -13,15 +20,14 @@ $('document').ready(function () {
             $('html').animate({scrollTop: (sr - 25)}, 400);
         }
         if ($(window).width() <= 800){
-            $('nav .list-container').slideToggle('slow');
+            navbar_list.slideToggle('slow');
         }
         $(this).addClass('active').siblings().removeClass('active');
+        mobile_nav_btn.style.transform = 'rotateX(0deg)';
         
     });
 
     //
-    let move_to_skill = $('#move-to-skills');
-    let skills = $('#skills');
     move_to_skill.on('click', event => {
         $('html').animate({scrollTop: (skills.offset().top - 85)}, 400);
     });
@@ -40,32 +46,58 @@ $('document').ready(function () {
     });
     */
 });
-let mobile_nav_btn = document.getElementById("mobile-nav-btn");
+triggerShuflle('shuflle');
 mobile_nav_btn.addEventListener('click', event => {
-    $('nav .list-container').slideToggle('slow');
+    navbar_list.slideToggle('slow');
 });
 
 // When the user scrolls the page, execute myFunction
-var main_navbar = $("#main-navbar");
 window.onscroll = function() {
     var height = $(window).scrollTop(),
     width = $(window).width();
-    if (height > 151){
+    if (height > nav_height){
         main_navbar.css({
             "position": "fixed",
             'left': '0px',
+            'top':'0px',
         });
     }
     else{
-     main_navbar.css({
+       main_navbar.css({
         "position": "relative"
     });
- }
- let sr =$(window).scrollTop()
- let skill_bar = $('.about-me .skills').offset().top
- if (sr > (skill_bar-450)) {
+   }
+   let sr =$(window).scrollTop()
+   let skill_bar = $('.about-me .skills').offset().top
+   if (sr > (skill_bar-450)) {
     //$('.about-me .skills .skill:nth-child(1) .skill-bar span').animate({'width': '90%'}, 400)
 };
 
 };
+
+function triggerShuflle(elemet_id = 'shuflle'){
+    let shuflle = document.getElementById(elemet_id);
+    let btns = shuflle.querySelectorAll('.filter-tags li');
+    let ports = shuflle.querySelectorAll('.filter li');
+    btns.forEach(function (btn) {
+        btn.addEventListener('click', e => {
+            data_filter = e.target.dataset.filter;
+            ports.forEach(e => {
+                if(data_filter === 'all'){
+                    shuflle.querySelectorAll('.filter li').forEach(item => {
+                        item.style.display = 'block';
+                    })
+                }
+                else {
+                    shuflle.querySelectorAll('.filter li').forEach(item => {
+                        item.style.display = 'none';
+                    });
+                    shuflle.querySelectorAll('[filter='+data_filter+']').forEach(item=>{
+                        item.style.display = 'block';
+                    })
+                }
+            })
+        })
+    })
+}
 

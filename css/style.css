@@ -1,21 +1,21 @@
 * {
 	font-family: 'Cairo', sans-serif;
+	box-sizing: border-box;
 }
 
-nav.navbar {
-	margin: 50px 20px;
+nav.nav {
+	padding: 50px 20px 10px;
 	position: relative;
 }
 
 
 nav .logo-container {
-	margin: 50px ;
 	text-align: center;
 	cursor: pointer;
 }
 
 nav .logo-container .logo{
-	font-size:34px;
+	font-size:2em;
 	color: #1e87f0;
 	font-weight: bold;
 }
@@ -25,24 +25,54 @@ nav .logo-container .logo span{
 	padding:0 5px;
 	border-radius: 5px;
 }
-nav .main-navbar{
-	margin: 0 auto;
-	top: 0;
-	width: 100%;
-	background-color: #ffffffb0;
-	z-index: 999;
-}
 
-
-
-
-nav .list-container .mobile-nav-btn{
-	display: none;
+.navbar-container{
+	height: 70px;
 	z-index: 10;
 }
+.navbar-container .navbar{
+	width: 100%;
+	background-color: #ffffff;
+}
+
+.navbar .navbar-control{
+	display: none;
+	padding: 0 20px;
+	overflow: hidden;
+	
+	color: #1e87f0;
+	line-height: 70px;
+}
+.navbar::after{
+	border-bottom: 2px solid #1e87f040;
+	top: 1px;
+	content: '';
+	width: 100%;
+	display: block;
+	position: relative;
+}
+.navbar .navbar-control .uk-icon{
+	float: right;
+	height: 70px;
+	line-height: 70px;
+	cursor: pointer;
+	transition: all .5s ease-in-out
+}
+.navbar .navbar-control .text{
+	float: left;
+	font-size: 2em;
+}
+
+.navbar .navbar-list{
+	text-align: center;
+	top: 0;
+	height: 70px;
+	position: relative;
+	background-color: #ffffff;
+}
 
 
-nav .uk-list li {
+.navbar .uk-list li {
 	display: inline-block;
 	font-size: 24px;
 	padding-top: 5px;
@@ -51,62 +81,49 @@ nav .uk-list li {
 	transition: all .3s ease-in-out;
 	cursor: pointer;
 }
-nav .uk-list li:hover{
+.navbar .uk-list li:hover{
 	background-color: #1e87f080;
 	color: #ffffff;
 	border-radius: 5px;
-	
 }
-nav .uk-list li a{
+
+.navbar .uk-list li a{
 	color: inherit;
 }
-nav .uk-list li a:hover{
+.navbar .uk-list li a:hover{
 	text-decoration: none;
 }
-nav .uk-list li.active{
+.navbar .uk-list li.active{
 	background-color: #1e87f0;
 	color: #ffffff;
 	border-radius: 5px;
 	transition: all .3s ease-in-out;
 }
 
-nav .mobile-nav-btn {
-	display: none;
-	width: 100%
-}
-
-
-nav .mobile-nav-btn span{
-	cursor: pointer;
-}
-
 
 @media (max-width:800px) {
 	/*  Mobile display */
-	nav.navbar {
+	.navbar .navbar-control{
+		display: block;
+	}
+	.navbar .uk-list {
 		margin: 0;
-		position: relative;
+		padding: 10px 0;
 	}
-
-	nav .list-container{
+	.navbar .navbar-list{
+		text-align: center;
 		display: none;
-		background-color: #ffffff;
+		height: auto;
+
 	}
-	nav .uk-list li {
+	.navbar .uk-list li {
 		display: block;
 		font-size: 24px;
 		font-weight: 600;
 		margin: 15px;
 	}
-	nav .mobile-nav-btn {
-		display: block;
-	}
 }
 
-
-body .uk-container +.fixed{
-	padding-top: 400px
-}
 
 /* about-me */
 
@@ -229,12 +246,14 @@ body .uk-container +.fixed{
 
 .port {
 	padding:80px 0 60px;
+	z-index: 4;
 }
 .port ul.filter-tags{
 	list-style: none;
 	padding: 0;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	border-bottom: 1px solid #e5e5e5;
+	z-index: 4;
 
 }
 .port ul.filter-tags li{
@@ -244,11 +263,42 @@ body .uk-container +.fixed{
 	background-color: #f7f7f7;
 	margin: 2px;
 	border-radius: 5px; 
+	z-index: 4;
 }
 .port ul.filter-tags li.active{
 	border-bottom: 2px solid #1e87f0;
 	border-bottom-right-radius: 0px;
 	border-bottom-left-radius: 0px;
+}
+.port #shuflle ul.filter li {
+	transition: all .3s ease;
+}
+.port #shuflle ul.filter li{
+	width: 250px;
+	height: 220px;
+	line-height: 250px;
+	margin: 5px;
+}
+.port ul.filter li .item {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.port ul.filter li .item .overlay {
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffffe4;
+}
+.port ul.filter li .item img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 /**/
 
