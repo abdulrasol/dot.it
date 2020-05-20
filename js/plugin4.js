@@ -36,12 +36,11 @@ $('document').ready(function () {
     $('.port ul.filter-tags li').click(function(event) {
         /* Act on the event */
         $(this).addClass('active').siblings().removeClass('active');
-        $(this).addClass('active').siblings().removeClass('active');
         if ($(this).data('filter') === 'all') {
             $('.filter').find('li').fadeIn(400);
         } else {
             var data_filter = $(this).data('filter');
-            $('.filter li').siblings().fadeOut(0);
+            $('.filter li').siblings().fadeOut(400);
             $('.filter').find('[filter='+data_filter+']').fadeIn(400);
         }
     });
@@ -53,14 +52,13 @@ $('document').ready(function () {
         cursorwidth:"5px"
     });
     */
-    
 });
+//triggerShuflle('shuflle');
 mobile_nav_btn.addEventListener('click', event => {
     navbar_list.slideToggle('slow');
 });
 
 // When the user scrolls the page, execute myFunction
-
 window.onscroll = function() {
     var height = $(window).scrollTop(),
     width = $(window).width();
@@ -70,34 +68,20 @@ window.onscroll = function() {
             'left': '0px',
             'top':'0px',
         });
-    }else{
-       main_navbar.css({"position": "relative"});
-   };
+    }
+    else{
+       main_navbar.css({
+        "position": "relative"
+    });
+   }
    let sr =$(window).scrollTop()
    let skill_bar = $('.about-me .skills').offset().top
-   if (sr < $('#about-me').offset().top) {
-       $('li[data-id=home]').addClass('active').siblings().removeClass('active');
-   } else if (sr > $('#about-me').offset().top && sr < $('#servies').offset().top){
-     $('li[data-id=about-me]').addClass('active').siblings().removeClass('active');
- } else if (sr > $('#servies').offset().top && sr < $('#portfolio').offset().top){
-    $('li[data-id=servies]').addClass('active').siblings().removeClass('active');
-}else if (sr > $('#portfolio').offset().top && sr < $('#request-servies').offset().top){
-    $('li[data-id=portfolio]').addClass('active').siblings().removeClass('active');
-}else if (sr > $('#request-servies').offset().top && sr /*< $('#contact-me').offset().top*/){
-    $('li[data-id=request-servies]').addClass('active').siblings().removeClass('active');
-}else{
-   $('li[data-id=contact-me]').addClass('active').siblings().removeClass('active');
-}
+   if (sr > (skill_bar-450)) {
+    //$('.about-me .skills .skill:nth-child(1) .skill-bar span').animate({'width': '90%'}, 400)
 };
 
-li = document.querySelectorAll('.navbar .uk-list li');
-li.forEach(e=> {
-    da = e.dataset.id;
-    //console.log(da+':'+ $('#'+da).offset().top);
+};
 
-});
-
-/*
 function triggerShuflle(elemet_id = 'shuflle'){
     let shuflle = document.getElementById(elemet_id);
     let btns = shuflle.querySelectorAll('.filter-tags li');
@@ -122,5 +106,5 @@ function triggerShuflle(elemet_id = 'shuflle'){
             })
         })
     })
-}*/
+}
 

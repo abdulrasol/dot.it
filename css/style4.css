@@ -246,12 +246,15 @@ nav .logo-container .logo span{
 
 .port {
 	padding:80px 0 60px;
+	z-index: 4;
 }
 .port ul.filter-tags{
 	list-style: none;
 	padding: 0;
 	margin-bottom: 15px;
 	border-bottom: 1px solid #e5e5e5;
+	z-index: 4;
+
 }
 .port ul.filter-tags li{
 	display: inline-block;
@@ -260,6 +263,7 @@ nav .logo-container .logo span{
 	background-color: #f7f7f7;
 	margin: 2px;
 	border-radius: 5px; 
+	z-index: 4;
 }
 .port ul.filter-tags li.active{
 	border-bottom: 2px solid #1e87f0;
@@ -267,52 +271,33 @@ nav .logo-container .logo span{
 	border-bottom-left-radius: 0px;
 }
 .port #shuflle ul.filter{
-	margin: 0;padding: 0;
+	overflow: hidden;
+}
+.port #shuflle ul.filter li {
+	transition: all .3s ease;
 }
 .port #shuflle ul.filter li{
 	width: 250px;
-	height: 250px;
+	height: 220px;
+	line-height: 250px;
 	margin: 5px;
-	padding: 0;
 }
-
 .port ul.filter li .item {
 	width: 100%;
 	height: 100%;
 }
-.port ul.filter li .item a {
-	text-decoration: none;
-}
 .port ul.filter li .item .overlay {
-	position: relative;
-	display: none;
-	width: 100%;
-	height: 80px;
-	color: #e4dfdf;
-	bottom: 80px;
-	background-color: #27242496;
-	padding-top: 10px
+	
 }
-
-.port ul.filter li .item .overlay span{
-	font-size: 18px;
-	font-weight: 600;
-	display: block;
+.port ul.filter li .item .img{
+	height: 0;
 }
-.port ul.filter li .item:hover .overlay{
-	display: block;
-} 
 .port ul.filter li .item img {
 	object-fit: cover;
-	width: 100%;
-	height: 100%;
+	width: 250px;
+	height: 250px;
 }
 /**/
-/**/
-
-.request-servies {
-	padding:80px 0 60px;
-}
 
 .text-center{
 	text-align: center;

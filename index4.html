@@ -9,9 +9,9 @@
 		@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 	</style>-->
 	<link rel="stylesheet" href="css/uikit.min.css" />
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/style4.css" />
 </head>
-<body style="height: 1000px">
+<body style="height: 20000px">
 	<nav class="nav">
 		<div class="logo-container">
 			<span class="logo">AbdulRasol <span>Al-Hilo</span></span> 
@@ -21,7 +21,7 @@
 		<div class="navbar">
 			<div class="navbar-control uk-grid-small" uk-grid>
 				<div class="uk-width-auto ">
-					<span id="mobile-nav-btn" class="uk-icon" uk-icon="icon:menu;ratio :3">
+					<span id="mobile-nav-btn" class="uk-icon" uk-icon="icon:chevron-up;ratio :3">
 					</span>
 				</div>
 				<div class="text">
@@ -36,7 +36,7 @@
 					<li data-id="about-me" class="uk-padding-small">About Me</li>
 					<li data-id="servies" class="uk-padding-small">Servies</li>
 					<li data-id="portfolio" class="uk-padding-small">Portfolio</li>
-					<li data-id="request-servies" class="uk-padding-small">Request Servies</li>
+					<li data-id="deploy-me" class="uk-padding-small">Deploy Me</li>
 					<li data-id="contact-me" class="uk-padding-small">Contact Me</li>
 				</ul>
 			</div>
@@ -158,156 +158,38 @@
 				<ul class="filter uk-flex uk-flex-center uk-child-width-auto@s uk-text-center" uk-grid>
 					<li filter="tag-web" class="tag-web">
 						<div class="item">
+							
 							<img src="images/01.jpg" alt="Img">
-							<a>
-								<div class="overlay uk-animation-fade">
-									<span>Spimebook, site for readers</span>
-									<span>Visit</span>
-								</div>
-							</a>
-						</div>
-					</li>
-					<li filter="tag-design" class="tag-web">
-						<div class="item">
-							<img src="images/servies/02.jpg" alt="Img">
-							<a>
-								<div class="overlay uk-animation-fade">
-									<span>Spimebook, site for readers</span>
-									<span>Visit</span>
-								</div>
-							</a>
-						</div>
-
-					</li>
-					<li filter="tag-design" class="tag-design">
-						<div class="item">
-							<img src="images/servies/05.jpg" alt="Img">
-							<a>
-								<div class="overlay uk-animation-fade">
-									<span>Spimebook, site for readers</span>
-									<span>Visit</span>
-								</div>
-							</a>
-						</div>
-					</li>
-					<li filter="tag-ads" class="tag-ads">
-						<div class="item">
-							<img src="images/servies/07.png" alt="Img">
-							<a>
-								<div class="overlay uk-animation-fade">
-									<span>Spimebook, site for readers</span>
-									<span>Visit</span>
-								</div>
-							</a>
-						</div>
-					</li>
-					<li filter="tag-ads" class="tag-ads">
-						<div class="item">
-							<img src="images/03.jpg" alt="Img">
-							<a>
-								<div class="overlay uk-animation-fade">
-									<span>Spimebook, site for readers</span>
-									<span>Visit</span>
-								</div>
-							</a>
-						</div>
-					</li>
-					<li filter="tag-web" class="tag-ads">
-						<div class="item">
-							<img src="images/04.jpg" alt="Img">
-							<a>
-								<div class="overlay uk-animation-fade">
-									<span>Spimebook, site for readers</span>
-									<span>Visit</span>
-								</div>
-							</a>
-						</div>
-					</li>
-					<li filter="tag-design" class="tag-design">
-						<div class="item">
-							<img src="images/01.jpg" alt="Img">
-							<a>
-								<div class="overlay uk-animation-fade">
-									<span>Spimebook, site for readers</span>
-									<span>Visit</span>
-								</div>
-							</a>
 						</div>
 					</li>
 					<li filter="tag-web" class="tag-web">
 						<div class="item">
-							<img src="images/servies/02.jpg" alt="Img">
-							<a>
-								<div class="overlay uk-animation-fade">
-									<span>Spimebook, site for readers</span>
-									<span>Visit</span>
-								</div>
-							</a>
+							
+							<img src="images/01.jpg" alt="Img">
+						</div>
+					</li>
+					<li filter="tag-design" class="tag-design">
+						<div class="item">
+							
+							<img src="images/01.jpg" alt="Img">
+						</div>
+					</li>
+					<li filter="tag-ads" class="tag-ads">
+						<div class="item">
+
+							<img src="images/01.jpg" alt="Img">
 						</div>
 					</li>
 				</ul>
+
 			</div>
 		</div>
 	</div>
-	<div id="request-servies" class="request-servies">
-		<div class="uk-container">
-			<h2>Request Servies</h2>
-			<form action="index_submit" method="post" accept-charset="utf-8">
-				<legend class="uk-legend uk-margin-bottom">Select Servies Type</legend>
-				<div class="uk-grid-small uk-child-width-1-2@s" uk-grid>
-					<div class="uk-padding-small">
-						<select class="uk-select" name="servies_type" required>
-							<option value="web">Web Development</option>
-							<option value="design">Graphics Designs</option>
-							<option value="ads">Online Marketing</option>
-							<option value="othor">Othor</option>
-						</select>
-					</div>
-					<div class="uk-padding-small">
-						<input class="uk-input" type="text" name="" value="" placeholder="Short Description" required>
-					</div>
-				</div>
-				<legend class="uk-legend uk-margin-bottom">Explain Your Request</legend>
-				<div class="uk-grid-small" uk-grid>
-					<div class="uk-padding-small uk-width-1-2@m">
-						<label style="display: block;" class="uk-form-label uk-margin-small-bottom" for="form-stacked-text">Descripe Your Request</label>
-						<div class="uk-form-controls">
-							<textarea id="content" name="content" class="uk-textarea uk-padding-small" rows="5" placeholder="Descripe Your Request?"
-							required></textarea>
-						</div>
-					</div>
-					<div class="uk-padding-small uk-width-1-2@m">
-						<label style="display: block;" class="uk-form-label uk-margin-small-bottom" for="form-stacked-text">Important Note</label>
-						<div class="uk-form-controls">
-							<ul class="uk-list">
-								<li>One</li>
-								<li>One</li>
-								<li>One</li>
-								<li>One</li>
-								<li>One</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<legend class="uk-legend uk-margin-bottom">Contacts Details</legend>
-				<div class="uk-grid-small uk-child-width-1-2@s" uk-grid>
-					<div class="uk-padding-small">
-						<input class="uk-input" type="text" name="" value="" placeholder="Your Name">
-					</div>
-					<div class="uk-padding-small">
-						<input class="uk-input" type="email" name="" value="" placeholder="Your Email">
-					</div>
-					<div class="uk-padding-small">
-						<input class="uk-input" type="tel" name="" value="" placeholder="Your Phone">
-					</div>
-				</form>
-			</div>
-		</div>
-		<script src="js/uikit.min.js"></script>
-		<script src="js/uikit-icons.min.js"></script>
-		<script src="js/jquery.js"></script>
-		<script src="js/jquery.nicescroll.min.js"></script>
-		<script src="js/plugin.js"></script>
+	<script src="js/uikit.min.js"></script>
+	<script src="js/uikit-icons.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/plugin4.js"></script>
 
-	</body>
-	</html>
+</body>
+</html>
