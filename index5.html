@@ -8,7 +8,7 @@
 	<!--<style>
 		@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 	</style>-->
-	<link rel="stylesheet" href="css/uikit.min.css"/>
+	<link rel="stylesheet" href="css/uikit.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 </head>
 <body style="height: 1000px">
@@ -36,6 +36,7 @@
 					<li data-id="about-me" class="uk-padding-small">About Me</li>
 					<li data-id="servies" class="uk-padding-small">Servies</li>
 					<li data-id="portfolio" class="uk-padding-small">Portfolio</li>
+					<li data-id="request-servies" class="uk-padding-small">Request Servies</li>
 					<li data-id="contact-me" class="uk-padding-small">Contact Me</li>
 				</ul>
 			</div>
@@ -45,19 +46,19 @@
 		<div class="uk-container">
 			<div class="uk-flex uk-flex-center uk-flex-middle center-s" uk-grid>
 				<div class="feature uk-width-1-3@s ">
-					<h3 class="">Freelancer</h3>
+					<h3 class="">Cheap</h3>
 					<p>
-						Quick Deploy, Fast Develpoment, Always Online to listen to You, keep simple & efficient...
+						Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
 					</p>
 				</div>
 				<div class="feature uk-width-1-3@s">
-					<h3>Competitve Prices</h3>
+					<h3>Cheap</h3>
 					<p>
-						Pay only for what jobs are accompilshed, And More Free Support...
+						Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
 					</p>
 				</div>
 				<div class="feature uk-width-1-3@s">
-					<h3>Experts</h3>
+					<h3>Cheap</h3>
 					<p>
 						Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
 					</p>
@@ -69,7 +70,7 @@
 		<div class="uk-container">
 			<div class="uk-flex uk-flex-middle uk-flex-center uk-child-width-auto@s" uk-grid>
 				<div class="about-img">
-					<img class="uk-border-circle" src="images/img.png" alt="abdulrasol">
+					<img class="uk-border-circle" src="images/logo.jpg" alt="abdulrasol">
 				</div>
 				<div class="about-name uk-text-center">
 					<h2 class="uk-margin-small">AbdulRasol S. Al-Hilo</h2>
@@ -146,7 +147,7 @@
 	</div>
 	<div id="portfolio" class="port">
 		<div class="uk-container">
-			<h2 class="center-s section-title">My Works</h2>
+			<h2>My Works</h2>
 			<div id='shuflle'>
 				<ul class="filter-tags">
 					<li data-filter="all" class="active" uk-filter-control>All</li>
@@ -248,48 +249,65 @@
 			</div>
 		</div>
 	</div>
-	<div id="contact-me" class="contact">
+	<div id="request-servies" class="request-servies">
 		<div class="uk-container">
-			<h2 class="section-title">Contact Me</h2>
-			<div class="uk-flex uk-flex-middle uk-child-width-1-2@s" uk-grid>
-				<div class="form">
-					<form class="center-s">
-						<input class="uk-input" type="text" name="name" value="" placeholder="Your Name">
-						<input class="uk-input" type="email" name="email" value="" placeholder="Your Email">
-						<textarea class="uk-textarea" placeholder="Your Messege.." rows="5"></textarea>
-						<button type="submet">Send</button>
-					</form>
-				</div>
-				<div class="request uk-text-center">
-					<h2 class="">OR</h2>
-					<h3 class="">Request Servies</h3>
-					<div class="uk-width-1-1 uk-text-center uk-margin-top">
-						<span id="move-to-skills" class="uk-icon-button  uk-margin-small-right" uk-icon="icon:cart">
-						</span>	
+			<h2>Request Servies</h2>
+			<form action="index_submit" method="post" accept-charset="utf-8">
+				<legend class="uk-legend uk-margin-bottom">Select Servies Type</legend>
+				<div class="uk-grid-small uk-child-width-1-2@s" uk-grid>
+					<div class="uk-padding-small">
+						<select class="uk-select" name="servies_type" required>
+							<option value="web">Web Development</option>
+							<option value="design">Graphics Designs</option>
+							<option value="ads">Online Marketing</option>
+							<option value="othor">Othor</option>
+						</select>
+					</div>
+					<div class="uk-padding-small">
+						<input class="uk-input" type="text" name="" value="" placeholder="Short Description" required>
 					</div>
 				</div>
+				<legend class="uk-legend uk-margin-bottom">Explain Your Request</legend>
+				<div class="uk-grid-small" uk-grid>
+					<div class="uk-padding-small uk-width-1-2@m">
+						<label style="display: block;" class="uk-form-label uk-margin-small-bottom" for="form-stacked-text">Descripe Your Request</label>
+						<div class="uk-form-controls">
+							<textarea id="content" name="content" class="uk-textarea uk-padding-small" rows="5" placeholder="Descripe Your Request?"
+							required></textarea>
+						</div>
+					</div>
+					<div class="uk-padding-small uk-width-1-2@m">
+						<label style="display: block;" class="uk-form-label uk-margin-small-bottom" for="form-stacked-text">Important Note</label>
+						<div class="uk-form-controls">
+							<ul class="uk-list">
+								<li>One</li>
+								<li>One</li>
+								<li>One</li>
+								<li>One</li>
+								<li>One</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<legend class="uk-legend uk-margin-bottom">Contacts Details</legend>
+				<div class="uk-grid-small uk-child-width-1-2@s" uk-grid>
+					<div class="uk-padding-small">
+						<input class="uk-input" type="text" name="" value="" placeholder="Your Name">
+					</div>
+					<div class="uk-padding-small">
+						<input class="uk-input" type="email" name="" value="" placeholder="Your Email">
+					</div>
+					<div class="uk-padding-small">
+						<input class="uk-input" type="tel" name="" value="" placeholder="Your Phone">
+					</div>
+				</form>
 			</div>
 		</div>
-	</div>
+		<script src="js/uikit.min.js"></script>
+		<script src="js/uikit-icons.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.nicescroll.min.js"></script>
+		<script src="js/plugin.js"></script>
 
-	<footer class="uk-text-center">
-		<div class="uk-flex uk-flex-center uk-flex-middle">
-			<a href="https://fb.com/dot.it" target="_black" title="Facebook">
-				<span class="uk-icon" uk-icon='icon:facebook;ratio:1.5'>
-				</span>
-			</a>
-			<a href="" title=""><span class="uk-icon" uk-icon='icon:instagram;ratio:1.5'></span></a>
-			<a href="" title=""><span class="uk-icon" uk-icon='icon:github;ratio:1.5'></span></a>
-			<a href="" title=""><span class="uk-icon" uk-icon='icon:youtube;ratio:1.5'></span></a>
-		</div>
-		<div class="uk-width-1-1">
-			<p>Made with <span uk-icon='heart'></span> and Hard Working - Copyrigth 2020 <span class="logo">Dot.IT</span></p>
-		</div>
-	</footer>
-	<script src="js/uikit.min.js"></script>
-	<script src="js/uikit-icons.min.js"></script>
-	<script src="js/jquery.js"></script>
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/plugin.js"></script>
-</body>
-</html>
+	</body>
+	</html>

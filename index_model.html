@@ -69,7 +69,7 @@
 		<div class="uk-container">
 			<div class="uk-flex uk-flex-middle uk-flex-center uk-child-width-auto@s" uk-grid>
 				<div class="about-img">
-					<img class="uk-border-circle" src="images/img.png" alt="abdulrasol">
+					<img class="uk-border-circle" src="images/logo.jpg" alt="abdulrasol">
 				</div>
 				<div class="about-name uk-text-center">
 					<h2 class="uk-margin-small">AbdulRasol S. Al-Hilo</h2>
@@ -264,14 +264,43 @@
 					<h2 class="">OR</h2>
 					<h3 class="">Request Servies</h3>
 					<div class="uk-width-1-1 uk-text-center uk-margin-top">
-						<span id="move-to-skills" class="uk-icon-button  uk-margin-small-right" uk-icon="icon:cart">
+						<span id="request-servies" class="uk-icon-button  uk-margin-small-right" uk-icon="icon:cart">
 						</span>	
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	<style type="text/css">
+		.model-container {
+			display: none;
+			position: fixed;
+			width: 100%;
+			top:0;
+			height: 100%;
+			left: 0;
+			background-color: #3a353570;
+			padding: 0 20px;
+		}
+		.model-container > div {
+			height: 100%;
+		}
+		.model-container .me-model{
+			display: block;
+			z-index: 100;
+			background-color: #FFF;
+			box-shadow: 2px 2px 8px #CCC;
+			padding: 10px;
+		}
+	</style>
+	<div class="model-container">
+		<div class="uk-flex uk-flex-center uk-flex-middle uk-width-1-1">
+			<div class="me-model uk-width-1-2@s">
+				<h3>Test Model</h3>
+				<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+			</div>
+		</div>
+	</div>
 	<footer class="uk-text-center">
 		<div class="uk-flex uk-flex-center uk-flex-middle">
 			<a href="https://fb.com/dot.it" target="_black" title="Facebook">
@@ -291,5 +320,28 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.nicescroll.min.js"></script>
 	<script src="js/plugin.js"></script>
+	<script charset="utf-8" async defer>
+		$(document).ready(function() {
+			var model = $('.me-model');
+			if ($(window).width() < 600) {
+				var x = $(window).width()- 30;
+				var request_servies = $('#request-servies');
+			} else {
+				console.log('OK')
+			}
+			
+			//console.log(x);
+			model.css('width', x + 'px');
+			//request_servies.parent().css('top', $(window).offset().top)
+			request_servies.click(function(event) {
+				/* Act on the event */
+				
+				
+				
+
+			});
+
+		});
+	</script>
 </body>
 </html>
